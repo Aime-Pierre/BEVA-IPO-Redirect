@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ouvrir le formulaire</title>
+  <title>Bénin Vivi Académie – Formulaire</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f0f4f0;
+      background: #0B3D91;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -16,86 +16,127 @@
       padding: 20px;
     }
     .card {
-      background: white;
+      background: #ffffff;
       border-radius: 16px;
       padding: 36px 28px;
       max-width: 420px;
       width: 100%;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      box-shadow: 0 6px 32px rgba(11,61,145,0.25);
       text-align: center;
     }
-    .icon { font-size: 52px; margin-bottom: 16px; }
-    h1 { color: #1B6B1B; font-size: 1.3rem; margin-bottom: 10px; }
-    p  { color: #555; font-size: 0.97rem; line-height: 1.6; margin-bottom: 20px; }
+    .logo-bar {
+      background: #0B3D91;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .logo-bar h2 {
+      color: #ffffff;
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    .logo-bar span {
+      color: #D4AF37;
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 3px;
+    }
+    .icon { font-size: 46px; margin-bottom: 14px; }
+    h1 { color: #0B3D91; font-size: 1.2rem; margin-bottom: 10px; font-weight: 700; }
+    p  { color: #444; font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; }
     .btn {
       display: inline-block;
-      background: #1B6B1B;
-      color: white;
+      background: #0B3D91;
+      color: #ffffff;
       padding: 14px 32px;
       border-radius: 8px;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
-      margin-bottom: 12px;
+      margin-top: 8px;
       width: 100%;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .btn:hover { background: #155515; }
+    .btn:hover { background: #092e6e; }
     .steps {
-      background: #fff8f0;
-      border: 1px solid #E8820C;
-      border-radius: 10px;
+      background: #f5f7fc;
+      border-left: 4px solid #D4AF37;
+      border-radius: 8px;
       padding: 16px;
       margin-top: 16px;
       text-align: left;
     }
-    .steps p { color: #E8820C; font-weight: 700; margin-bottom: 8px; }
-    .steps ol { padding-left: 18px; color: #444; font-size: 0.92rem; }
-    .steps ol li { margin-bottom: 6px; }
+    .steps .steps-title {
+      color: #0B3D91;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+    }
+    .steps ol { padding-left: 18px; color: #333; font-size: 0.91rem; }
+    .steps ol li { margin-bottom: 6px; line-height: 1.5; }
+    .divider {
+      width: 40px;
+      height: 3px;
+      background: #D4AF37;
+      margin: 12px auto 20px;
+      border-radius: 2px;
+    }
     #msg-android, #msg-ios, #msg-normal { display: none; }
   </style>
 </head>
 <body>
 <div class="card">
+
+  <div class="logo-bar">
+    <h2>BEVA</h2>
+    <span>Bénin Vivi Académie</span>
+  </div>
+
   <div class="icon">📋</div>
   <h1>Accéder au formulaire</h1>
+  <div class="divider"></div>
 
-  <!-- Message pour navigateur normal : redirection automatique -->
+  <!-- Navigateur normal : redirection automatique -->
   <div id="msg-normal">
     <p>Redirection en cours vers le formulaire…</p>
   </div>
 
-  <!-- Message Android dans Facebook -->
+  <!-- Android dans Facebook -->
   <div id="msg-android">
     <p>Le formulaire va s'ouvrir dans votre navigateur.</p>
     <p style="color:#888;font-size:0.85rem;">Si cela ne fonctionne pas automatiquement :</p>
     <div class="steps">
-      <p>📌 Comment ouvrir le formulaire :</p>
+      <p class="steps-title">📌 Comment ouvrir le formulaire :</p>
       <ol>
         <li>Appuyez sur les <strong>trois points ⋮</strong> en haut à droite</li>
         <li>Choisissez <strong>« Ouvrir dans Chrome »</strong> ou <strong>« Ouvrir dans le navigateur »</strong></li>
       </ol>
     </div>
-    <br>
     <a id="link-android" class="btn" href="#">Ouvrir le formulaire →</a>
   </div>
 
-  <!-- Message iOS dans Facebook -->
+  <!-- iOS dans Facebook -->
   <div id="msg-ios">
-    <p>Facebook bloque l'ouverture directe du formulaire. Suivez ces étapes :</p>
+    <p>Facebook ne permet pas l'ouverture directe. Suivez ces étapes :</p>
     <div class="steps">
-      <p>📌 Comment ouvrir dans un navigateur :</p>
+      <p class="steps-title">📌 Comment ouvrir dans Safari :</p>
       <ol>
         <li>Appuyez sur les <strong>trois points …</strong> en haut à droite</li>
-        <li>Choisissez <strong>«Ouvrir dans un navigateur externe ou Ouvrir dans Safari »</strong></li>
+        <li>Choisissez <strong>« Ouvrir dans Safari »</strong> ou <strong>« Ouvrir dans un navigateur externe »</strong></li>
       </ol>
     </div>
-    <br>
-    <a id="link-ios" class="btn" href="#">Vous pouvez Copier le lien du formulaire et le coller dans le navigateur de votre choix en cliquant ici</a>
+    <a id="link-ios" class="btn" href="#">Copier le lien du formulaire</a>
   </div>
+
 </div>
 
 <script>
-  // ⬇️ REMPLACEZ CETTE URL PAR VOTRE LIEN GOOGLE FORM
+  // ⬇️ VOTRE LIEN GOOGLE FORM / GOOGLE SCRIPT
   const FORM_URL = "https://script.google.com/macros/s/AKfycbx_7y0-d-pSepIJNk8mbenPBG9UQihoXFoYXyoUWfar7XQdukKUpZH7tORr735pZu6lWA/exec";
 
   const ua = navigator.userAgent || "";
@@ -104,21 +145,17 @@
   const isIOS      = /iPhone|iPad|iPod/.test(ua);
 
   if (!isFacebook) {
-    // Navigateur normal → redirection directe
     document.getElementById("msg-normal").style.display = "block";
     window.location.href = FORM_URL;
 
   } else if (isAndroid) {
-    // Android + Facebook → intent Chrome
     document.getElementById("msg-android").style.display = "block";
     const encoded = encodeURIComponent(FORM_URL.replace("https://", ""));
     const intentUrl = "intent://" + encoded + "#Intent;scheme=https;package=com.android.chrome;end";
     document.getElementById("link-android").href = intentUrl;
-    // Tentative automatique
     setTimeout(() => { window.location.href = intentUrl; }, 800);
 
   } else if (isIOS) {
-    // iOS + Facebook → instructions manuelles
     document.getElementById("msg-ios").style.display = "block";
     document.getElementById("link-ios").href = FORM_URL;
     document.getElementById("link-ios").onclick = function(e) {
@@ -129,8 +166,8 @@
         prompt("Copiez ce lien et ouvrez-le dans Safari :", FORM_URL);
       }
     };
+
   } else {
-    // Autre navigateur intégré → redirection directe
     document.getElementById("msg-normal").style.display = "block";
     window.location.href = FORM_URL;
   }
